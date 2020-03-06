@@ -1,0 +1,52 @@
+What is Ajax
+Asyncronous JavScript And XML
+Ajax is Not programming language its Technique coantain many technologies
+DOM => Interacting with Data and Display it
+XML/JSON => Get & Send Data to the Server
+XMLHttpRequest => Making the communication with the server
+Javascript => Connect all Technologies together
+
+How it works
+you open the webpage
+choose option from selectbox
+a request will send to the server
+a response will get data back
+part of the page is updated with the data comes from the the server withouth refresh the page
+
+What can we do with Ajax
+Allows Content on Webpages to updae immediately when a user performs an action
+you can send and receive information in various formats such as JSON,XML,HTML,and TextFiles
+You don't need to reload the page to show data
+you can contiue to use the application while the application requests information from the server in the background
+
+Examples
+Google Search
+uploding youtube videos
+writing post in facebook
+attaching email in gmail
+
+Deal with Network Requesta and Status Codes
+- open Netowrk tab
+- 404 / 500/ 429
+
+
+========== Section2: XHR - Ready State and Status Code =================
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
