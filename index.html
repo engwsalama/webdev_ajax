@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AJAX </title>
+</head>
+<body>
+  <button onclick="getRepos()">Get Repos</button>
+  <script>
+    // Make function to do the request
+    function getRepos(){
+      // Assign the request object to variable 
+      // XMLHttpRequest it's object that exchange the data with the server in the background
+
+      var myRequest = new XMLHttpRequest();
+      
+      myRequest.onreadystatechange = function(){
+        console.log(this.readyState);
+        console.log(this.status)
+        // On Ready State Change ==> it's a function is called when ready state change
+      /*
+        What is the Ready State => the status of the request 
+        [0] Request not Initialized
+        [1] Server connection esablished
+        [2] Request Received
+        [3] Processing Request
+        [4] Request is finished and Response is Ready
+        Status => Response Status Code
+        [200] ok
+      */
+        // If request is finished and response is ready and status code is 200(ok), get response text
+        if (this.readyState === 4 && this.status=== 200){
+          console.log(this.responseText);
+          console.log(myRequest); // here will show all data
+        }
+      };           
+      /* XMLHttpRequest.open(METHOD,URL,ASYNC,USER,PASSWORD)     
+         TRUE: ASYNC - FALSE: SYNC
+        USER & PASSWORD ARE OPTIONALS
+        URL could be a file name
+      */
+      myRequest.open(
+        "GET",'https://api.github.com/users/engwsalama/repos',true
+      );
+      myRequest.send();
+    }
+     
+  </script>
+</body>
+</html>

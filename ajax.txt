@@ -1,3 +1,53 @@
+Section1: Introduction ==========
+
+Synchronous Code
+=================
+posts =loadPostsSync();
+// ... Wait til posts are fetched
+// ... do something with posts
+
+doTheNextThing(); // Has to wait until posts load
+there are many factors to be considered such as band-width , network speed , etc.
+
+In this way of writing this code we're going to have to wait until the posts are fetched and then do something with the post and then only after that's done can we nove on to the doNextThing() function
+so this is what's called a blocking code.
+It's going to block until the posts are fetched and loaded wchich obviously slows things down
+
+
+Asynchronous Code
+=================
+loadPostsAsync(function(){
+	// ... Wait til posts are fetched
+	// ... do something with posts
+
+});
+
+doTheNextThing(); // Doesn't has to wait until posts load
+
+- In this cas instead of just pulling th post out of a sync fucntion we are passing in a callback function which is just one method for handling a sync code.
+- this call back will run and fetch the posts and allow us to do something with the post
+- but the doTheNextThing() does not have to wait until the posts are fetched and loaded
+
+- so , the program is not blocked and it will simply jsut keep going even if it takes a while for the posts to be fetched
+
+- It is not going to stop the doTheNextThing() function from running.
+
+- In turn this is much faster and that's the beauty of async javascript and async programing (AJAX)
+
+================ Section 2: Browser/Server APIs ====
+Most Async code you work with will be part of an API or Library, such as 
+ - Ajax and XMLHttpRequest (XHR) object
+
+There is a few ways to handle Async code such as :
+- Callbacks
+- promises
+
+
+
+
+
+
+
 What is Ajax
 Asyncronous JavScript And XML
 Ajax is Not programming language its Technique coantain many technologies
